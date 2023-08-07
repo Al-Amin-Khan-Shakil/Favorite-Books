@@ -8,15 +8,34 @@
 <body>
   <section id="book-list">
     <div class="book-list-wrapper">
-      <div class="book-list-title-container">
-        <h1 class="book-list-title">
-          My Awesome Books
-        </h1>
+      <div class="book-list-container">
+        <div class="book-list-title-container">
+          <h1 class="book-list-title">
+            My Awesome Books
+          </h1>
+        </div>
+        <ul id="list-container">
+          
+        </ul>
       </div>
-      <ul id="list-container">
-        
-      </ul>
+      <div class="add-book-container">
+        <form action="" id="book-form">
+          <div class="input-container">
+            <input type="text" id="title" name="title" placeholder="Title" required>
+          </div>
+          <div class="input-container">
+            <input type="text" id="author" name="author" placeholder="Author" required>
+          </div>
+          <div class="input-container">
+            <button type="submit" id="add-btn">Add</button>
+          </div>
+        </form>
+      </div>
     </div>
   </section>
+
+  <!--JavaScript-->
+  <script src="./JavaScript/script.js"></script>
+  <!--JavaScript-->
 </body>
 </html>
