@@ -74,3 +74,16 @@ function createDynamicBooks() {
     listContainer.appendChild(listItem);
   });
 }
+
+addBTN.addEventListener('click', (e) => {
+  e.preventDefault();
+  addBook();
+  setToLocal();
+  createDynamicBooks();
+})
+
+function removeBook(index) {
+  booksData = booksData.filter((book, i) => i !== index);
+  setToLocal();
+  createDynamicBooks();
+}
