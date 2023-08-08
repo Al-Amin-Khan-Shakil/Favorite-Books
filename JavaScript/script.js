@@ -85,3 +85,5 @@ addBTN.addEventListener('click', (e) => {
   setToLocal();
   createDynamicBooks();
 });
+
+window.addEventListener('load', createDynamicBooks);
