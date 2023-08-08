@@ -11,7 +11,7 @@ let booksData = [];
 function addBook() {
   const title = document.getElementById('title').value.trim();
   const author = document.getElementById('author').value.trim();
-  
+
   if (title && author) {
     const newbook = new Book(title, author);
     booksData.push(newbook);
@@ -29,6 +29,12 @@ function getFromLocal() {
   if (getData) {
     booksData = JSON.parse(getData);
   }
+}
+
+function removeBook(index) {
+  booksData = booksData.filter((book, i) => i !== index);
+  setToLocal();
+  createDynamicBooks();
 }
 
 function createDynamicBooks() {
@@ -80,10 +86,4 @@ addBTN.addEventListener('click', (e) => {
   addBook();
   setToLocal();
   createDynamicBooks();
-})
-
-function removeBook(index) {
-  booksData = booksData.filter((book, i) => i !== index);
-  setToLocal();
-  createDynamicBooks();
-}
+});
