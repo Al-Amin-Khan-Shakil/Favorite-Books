@@ -31,12 +31,6 @@ function getFromLocal() {
   }
 }
 
-function removeBook(index) {
-  booksData = booksData.filter((book, i) => i !== index);
-  setToLocal();
-  createDynamicBooks();
-}
-
 function createDynamicBooks() {
   getFromLocal();
   listContainer.innerHTML = '';
@@ -71,7 +65,11 @@ function createDynamicBooks() {
     const removeBTN = document.createElement('button');
     removeBTN.textContent = 'Remove';
     removeBTN.classList.add('remove-btn');
-    removeBTN.addEventListener('click', () => removeBook(index));
+    removeBTN.addEventListener('click', () => {
+      booksData = booksData.filter((book, i) => i !== index);
+      setToLocal();
+      createDynamicBooks();
+    });
     btnContainer.appendChild(removeBTN);
 
     listItem.appendChild(contentContainer);
