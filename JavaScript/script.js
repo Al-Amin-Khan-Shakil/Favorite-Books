@@ -1,9 +1,11 @@
 const listContainer = document.getElementById('list-container');
 const addBTN = document.getElementById('add-btn');
 
-function Book(title, author) {
-  this.title = title;
-  this.author = author;
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
 }
 
 let booksData = [];
