@@ -1,89 +1,91 @@
 const listContainer = document.getElementById('list-container');
 const addBTN = document.getElementById('add-btn');
 
-function Book(title, author) {
-  this.title = title;
-  this.author = author;
-}
-
-let booksData = [];
-
-function addBook() {
-  const title = document.getElementById('title').value.trim();
-  const author = document.getElementById('author').value.trim();
-
-  if (title && author) {
-    const newbook = new Book(title, author);
-    booksData.push(newbook);
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
   }
-  document.getElementById('title').value = '';
-  document.getElementById('author').value = '';
-}
 
-function setToLocal() {
-  localStorage.setItem('bookCollection', JSON.stringify(booksData));
-}
+  static booksData = [];
 
-function getFromLocal() {
-  const getData = localStorage.getItem('bookCollection');
-  if (getData) {
-    booksData = JSON.parse(getData);
+  static addBook() {
+    const title = document.getElementById('title').value.trim();
+    const author = document.getElementById('author').value.trim();
+
+    if (title && author) {
+      const newbook = new Book(title, author);
+      this.booksData.push(newbook);
+    }
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
   }
-}
 
-function createDynamicBooks() {
-  getFromLocal();
-  listContainer.innerHTML = '';
-  booksData.forEach((book, index) => {
-    const listItem = document.createElement('li');
-    listItem.classList.add('parent-list');
+  static setToLocal() {
+    localStorage.setItem('bookCollection', JSON.stringify(this.booksData));
+  }
 
-    const contentContainer = document.createElement('div');
-    contentContainer.classList.add('content-container');
+  static getFromLocal() {
+    const getData = localStorage.getItem('bookCollection');
+    if (getData) {
+      this.booksData = JSON.parse(getData);
+    }
+  }
 
-    const titleContainer = document.createElement('div');
-    titleContainer.classList.add('title-container');
-    contentContainer.appendChild(titleContainer);
+  static createDynamicBooks() {
+    this.getFromLocal();
+    listContainer.innerHTML = '';
+    this.booksData.forEach((book, index) => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('parent-list');
 
-    const bookName = document.createElement('h2');
-    bookName.classList.add('book-name');
-    bookName.textContent = book.title;
-    titleContainer.appendChild(bookName);
+      const contentContainer = document.createElement('div');
+      contentContainer.classList.add('content-container');
 
-    const authorContainer = document.createElement('div');
-    authorContainer.classList.add('author-container');
-    contentContainer.appendChild(authorContainer);
+      const titleContainer = document.createElement('div');
+      titleContainer.classList.add('title-container');
+      contentContainer.appendChild(titleContainer);
 
-    const authorName = document.createElement('p');
-    authorName.classList.add('author-name');
-    authorName.textContent = book.author;
-    authorContainer.appendChild(authorName);
+      const bookName = document.createElement('h2');
+      bookName.classList.add('book-name');
+      bookName.textContent = `"${book.title}" by`;
+      titleContainer.appendChild(bookName);
 
-    const btnContainer = document.createElement('div');
-    btnContainer.classList.add('btn-container');
+      const authorContainer = document.createElement('div');
+      authorContainer.classList.add('author-container');
+      contentContainer.appendChild(authorContainer);
 
-    const removeBTN = document.createElement('button');
-    removeBTN.textContent = 'Remove';
-    removeBTN.classList.add('remove-btn');
-    removeBTN.addEventListener('click', () => {
-      booksData = booksData.filter((book, i) => i !== index);
-      setToLocal();
-      createDynamicBooks();
+      const authorName = document.createElement('p');
+      authorName.classList.add('author-name');
+      authorName.textContent = book.author;
+      authorContainer.appendChild(authorName);
+
+      const btnContainer = document.createElement('div');
+      btnContainer.classList.add('btn-container');
+
+      const removeBTN = document.createElement('button');
+      removeBTN.textContent = 'Remove';
+      removeBTN.classList.add('remove-btn');
+      removeBTN.addEventListener('click', () => {
+        this.booksData = this.booksData.filter((book, i) => i !== index);
+        this.setToLocal();
+        this.createDynamicBooks();
+      });
+      btnContainer.appendChild(removeBTN);
+
+      listItem.appendChild(contentContainer);
+      listItem.appendChild(btnContainer);
+
+      listContainer.appendChild(listItem);
     });
-    btnContainer.appendChild(removeBTN);
-
-    listItem.appendChild(contentContainer);
-    listItem.appendChild(btnContainer);
-
-    listContainer.appendChild(listItem);
-  });
+  }
 }
 
 addBTN.addEventListener('click', (e) => {
   e.preventDefault();
-  addBook();
-  setToLocal();
-  createDynamicBooks();
+  Book.addBook();
+  Book.setToLocal();
+  Book.createDynamicBooks();
 });
 
-window.addEventListener('load', createDynamicBooks);
+window.addEventListener('load', Book.createDynamicBooks());
