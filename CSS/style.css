@@ -1,10 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#book-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.book-list-wrapper,
+.book-list-container,
+.book-list-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.book-list-title {
+  padding: 10px 0;
+}
+
+#list-container {
+  width: 96vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #000;
+  overflow-y: scroll;
 }
 
 .parent-list {
-  padding: 8px 20px;
-  border-bottom: 3px solid #b8b7b7;
+  padding: 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parent-list:nth-child(odd) {
+  background-color: rgba(224, 219, 219, 0.442);
+}
+
+.content-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 6px;
+}
+
+.book-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.author-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.remove-btn {
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 2px 4px;
+  box-shadow: #0005 1px 3px 3px;
+}
+
+.add-book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+#book-form {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 8px;
+  margin-bottom: 3vh;
+}
+
+.form-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 4vh;
+  padding: 4vh 0;
+  border-top: #0005 3px solid;
+}
+
+.input-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 4px 8px;
+}
+
+.input-container button {
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 2px 4px;
+  box-shadow: #0005 1px 3px 3px;
+  width: 30%;
+  text-align: center;
 }

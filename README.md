@@ -1,4 +1,8 @@
+<a name="readme-top"></a>
+
 <div align="center">
+  <img src="tech_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
   <h1><b>Favorite Books</b></h1>
 
@@ -145,6 +149,12 @@ You can deploy this project using:
 - GitHub: [@githubhandle](https://github.com/Ayokunnumi1)
 - Twitter: [@twitterhandle](https://twitter.com/AyokunnumiA)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ayokunnumiomololu)
+
+👤 **Lucy W. Mwangi**
+
+- GitHub: [@lucy-sees](https://github.com/lucy-sees)
+- Twitter: [@\_The_LoneWolf](https://twitter.com/_The_LoneWolf)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/lucy-w-mwangi-83a31b11b/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
