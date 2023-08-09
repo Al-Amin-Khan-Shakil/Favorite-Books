@@ -6,21 +6,22 @@ class Book {
     this.title = title;
     this.author = author;
   }
-}
-
-let booksData = [];
-
-function addBook() {
-  const title = document.getElementById('title').value.trim();
-  const author = document.getElementById('author').value.trim();
-
-  if (title && author) {
-    const newbook = new Book(title, author);
-    booksData.push(newbook);
+  static booksData = [];
+  
+  static addBook() {
+    const title = document.getElementById('title').value.trim();
+    const author = document.getElementById('author').value.trim();
+  
+    if (title && author) {
+      const newbook = new Book(title, author);
+      booksData.push(newbook);
+    }
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
   }
-  document.getElementById('title').value = '';
-  document.getElementById('author').value = '';
+  
 }
+
 
 function setToLocal() {
   localStorage.setItem('bookCollection', JSON.stringify(booksData));
