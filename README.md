@@ -150,7 +150,7 @@ You can deploy this project using:
 - Twitter: [@twitterhandle](https://twitter.com/AyokunnumiA)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ayokunnumiomololu)
 
-  👤 **Lucy W. Mwangi**
+👤 **Lucy W. Mwangi**
 
 - GitHub: [@lucy-sees](https://github.com/lucy-sees)
 - Twitter: [@\_The_LoneWolf](https://twitter.com/_The_LoneWolf)
