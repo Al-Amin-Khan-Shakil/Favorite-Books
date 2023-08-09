@@ -7,6 +7,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #book-list {
   display: flex;
   justify-content: center;
@@ -14,7 +18,8 @@
   width: 100vw;
 }
 
-.book-list-wrapper, .book-list-container,
+.book-list-wrapper,
+.book-list-container,
 .book-list-title-container {
   display: flex;
   flex-direction: column;
@@ -51,7 +56,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  column-gap: 8px;
+  column-gap: 6px;
 }
 
 .book-name {

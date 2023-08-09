@@ -48,7 +48,7 @@ class Book {
 
       const bookName = document.createElement('h2');
       bookName.classList.add('book-name');
-      bookName.textContent = book.title;
+      bookName.textContent = `"${book.title}" by`;
       titleContainer.appendChild(bookName);
 
       const authorContainer = document.createElement('div');
