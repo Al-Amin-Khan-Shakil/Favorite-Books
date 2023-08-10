@@ -1,5 +1,12 @@
 const listContainer = document.getElementById('list-container');
 const addBTN = document.getElementById('add-btn');
+const list = document.getElementById('list-link');
+const addNewBtn = document.getElementById('add-new-link');
+const contactInfo = document.getElementById('contact-link');
+const bookList = document.getElementById('book-list');
+const addNewSection = document.getElementById('add-new-section');
+const contactSection = document.getElementById('contact-section');
+const dateHolder = document.getElementById('date');
 
 class Book {
   constructor(title, author) {
@@ -79,6 +86,24 @@ class Book {
       listContainer.appendChild(listItem);
     });
   }
+
+  static showList() {
+    bookList.style.display = 'flex';
+    addNewSection.style.display = 'none';
+    contactSection.style.display = 'none';
+  }
+
+  static showForm() {
+    bookList.style.display = 'none';
+    addNewSection.style.display = 'flex';
+    contactSection.style.display = 'none';
+  }
+
+  static showContact() {
+    bookList.style.display = 'none';
+    addNewSection.style.display = 'none';
+    contactSection.style.display = 'flex';
+  }
 }
 
 addBTN.addEventListener('click', (e) => {
@@ -87,5 +112,11 @@ addBTN.addEventListener('click', (e) => {
   Book.setToLocal();
   Book.createDynamicBooks();
 });
+
+const currentDate = new Date();
+dateHolder.innerHTML = currentDate;
+list.addEventListener('click', Book.showList);
+addNewBtn.addEventListener('click', Book.showForm);
+contactInfo.addEventListener('click', Book.showContact);
 
 window.addEventListener('load', Book.createDynamicBooks());
