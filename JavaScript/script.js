@@ -115,4 +115,8 @@ addBTN.addEventListener('click', (e) => {
   Book.createDynamicBooks();
 });
 
+list.addEventListener('click', Book.showList());
+addNewBtn.addEventListener('click', Book.showForm());
+contactInfo.addEventListener('click', Book.showContact());
+
 window.addEventListener('load', Book.createDynamicBooks());
