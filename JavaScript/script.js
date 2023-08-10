@@ -90,7 +90,21 @@ class Book {
     bookList.style.display = 'flex';
     addNewSection.style.display = 'none';
     contactSection.style.display = 'none';
-    list.style.color = 'hsl(0, 95%, 59%);'
+    list.style.color = 'hsl(0, 95%, 59%)';
+  }
+
+  static showForm() {
+    bookList.style.display = 'none';
+    addNewSection.style.display = 'flex';
+    contactSection.style.display = 'none';
+    addNewBtn.style.color = 'hsl(0, 95%, 59%)';
+  }
+
+  static showContact() {
+    bookList.style.display = 'none';
+    addNewSection.style.display = 'none';
+    contactSection.style.display = 'flex';
+    contactInfo.style.color = 'hsl(0, 95%, 59%)';
   }
 }
 
