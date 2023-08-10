@@ -3,6 +3,9 @@ const addBTN = document.getElementById('add-btn');
 const list = document.getElementById('list-btn');
 const addNewBtn = document.getElementById('add-new-btn');
 const contactInfo = document.getElementById('contact-info');
+const bookList = document.getElementById('book-list');
+const addNewSection = document.getElementById('add-new-section');
+const contactSection = document.getElementById('contact-section');
 
 class Book {
   constructor(title, author) {
@@ -84,7 +87,10 @@ class Book {
   }
 
   static showList() {
-   
+    bookList.style.display = 'flex';
+    addNewSection.style.display = 'none';
+    contactSection.style.display = 'none';
+    list.style.color = 'hsl(0, 95%, 59%);'
   }
 }
 
