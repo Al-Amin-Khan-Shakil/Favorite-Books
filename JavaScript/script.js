@@ -1,5 +1,8 @@
 const listContainer = document.getElementById('list-container');
 const addBTN = document.getElementById('add-btn');
+const list = document.getElementById('list-btn');
+const addNewBtn = document.getElementById('add-new-btn');
+const contactInfo = document.getElementById('contact-info');
 
 class Book {
   constructor(title, author) {
@@ -78,6 +81,10 @@ class Book {
 
       listContainer.appendChild(listItem);
     });
+  }
+
+  static showList() {
+   
   }
 }
 
