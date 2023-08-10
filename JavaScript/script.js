@@ -6,6 +6,7 @@ const contactInfo = document.getElementById('contact-link');
 const bookList = document.getElementById('book-list');
 const addNewSection = document.getElementById('add-new-section');
 const contactSection = document.getElementById('contact-section');
+const dateHolder = document.getElementById('date');
 
 class Book {
   constructor(title, author) {
@@ -90,25 +91,20 @@ class Book {
     bookList.style.display = 'flex';
     addNewSection.style.display = 'none';
     contactSection.style.display = 'none';
-    list.style.color = 'hsl(0, 95%, 59%)';
-    console.log('Show List');
   }
 
   static showForm() {
     bookList.style.display = 'none';
     addNewSection.style.display = 'flex';
     contactSection.style.display = 'none';
-    addNewBtn.style.color = 'hsl(0, 95%, 59%)';
-    console.log('Show Form');
   }
 
   static showContact() {
     bookList.style.display = 'none';
     addNewSection.style.display = 'none';
     contactSection.style.display = 'flex';
-    contactInfo.style.color = 'hsl(0, 95%, 59%)';
-    console.log('Show Contact');
   }
+
 }
 
 addBTN.addEventListener('click', (e) => {
@@ -118,6 +114,8 @@ addBTN.addEventListener('click', (e) => {
   Book.createDynamicBooks();
 });
 
+const currentDate = new Date();
+dateHolder.innerHTML = currentDate; 
 list.addEventListener('click', Book.showList);
 addNewBtn.addEventListener('click', Book.showForm);
 contactInfo.addEventListener('click', Book.showContact);

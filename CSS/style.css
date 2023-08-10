@@ -68,7 +68,7 @@ body {
 }
 
 .menu-list:hover {
-  color:#5b9a8b;
+  color: #16814f;
 }
 
 .menu-list:last-child {
@@ -263,6 +263,24 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: 70vh;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70vw;
+  height: 60vh;
+  row-gap: 6vh;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #5b9a8b;
+  margin: 6vh 0;
 }
 
 #footer-section {
