@@ -187,7 +187,7 @@ body {
 }
 
 #add-new-section {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -257,7 +257,7 @@ body {
 }
 
 #contact-section {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
