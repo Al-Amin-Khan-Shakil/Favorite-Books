@@ -91,6 +91,7 @@ class Book {
     addNewSection.style.display = 'none';
     contactSection.style.display = 'none';
     list.style.color = 'hsl(0, 95%, 59%)';
+    console.log('Show List');
   }
 
   static showForm() {
@@ -98,6 +99,7 @@ class Book {
     addNewSection.style.display = 'flex';
     contactSection.style.display = 'none';
     addNewBtn.style.color = 'hsl(0, 95%, 59%)';
+    console.log('Show Form');
   }
 
   static showContact() {
@@ -105,6 +107,7 @@ class Book {
     addNewSection.style.display = 'none';
     contactSection.style.display = 'flex';
     contactInfo.style.color = 'hsl(0, 95%, 59%)';
+    console.log('Show Contact');
   }
 }
 
@@ -115,8 +118,8 @@ addBTN.addEventListener('click', (e) => {
   Book.createDynamicBooks();
 });
 
-list.addEventListener('click', Book.showList());
-addNewBtn.addEventListener('click', Book.showForm());
-contactInfo.addEventListener('click', Book.showContact());
+list.addEventListener('click', Book.showList);
+addNewBtn.addEventListener('click', Book.showForm);
+contactInfo.addEventListener('click', Book.showContact);
 
 window.addEventListener('load', Book.createDynamicBooks());

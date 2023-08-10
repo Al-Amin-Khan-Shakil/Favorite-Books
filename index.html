@@ -7,7 +7,8 @@
   <title>Favorite Books</title>
 </head>
 <body>
-  <header id="header">
+
+  <header id="header-section">
     <nav class="navbar">
       <div class="logo-wrapper">
         <a href="#" class="logo">FAVORITE BOOKS</a>
@@ -24,18 +25,25 @@
       8/10/2023
     </div>
   </header>
-  <section id="book-list">
-    <div class="book-list-wrapper">
-      <div class="book-list-container">
-        <div class="book-list-title-container">
-          <h1 class="book-list-title">
-            My Awesome Books
-          </h1>
+
+  <div id="main-container">
+  
+    <section id="book-list">
+      <div class="book-list-wrapper">
+        <div class="book-list-container">
+          <div class="book-list-title-container">
+            <h1 class="book-list-title">
+              My Favorite Books
+            </h1>
+          </div>
+          <ul id="list-container">
+            
+          </ul>
         </div>
-        <ul id="list-container">
-          
-        </ul>
       </div>
+    </section>
+  
+    <section id="add-new-section">
       <div class="add-book-container">
         <form action="" id="book-form">
           <h2 class="form-title">Add New Book</h2>
@@ -50,11 +58,31 @@
           </div>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
+    
+    <section id="contact-section">
+      <div class="content-container">
+        <h2>Contact Information</h2>
+        <ul id="info-container">
+          <li class="infolist">email</li>
+          <li class="infolist">number</li>
+          <li class="infolist">address</li>
+        </ul>
+      </div>
+    </section>
 
-  <!--JavaScript-->
-  <script src="./JavaScript/script.js"></script>
-  <!--JavaScript-->
+  </div>
+
+  <footer id="footer-section">
+    <div class="footer-bar">
+      <div class="footer-content">
+        Copyright: ...
+      </div>
+    </div>
+  </footer>
+
+<!--JavaScript-->
+<script src="./JavaScript/script.js"></script>
+<!--JavaScript-->
 </body>
 </html>
