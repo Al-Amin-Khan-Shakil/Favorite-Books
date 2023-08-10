@@ -175,7 +175,8 @@ body {
   column-gap: 5px;
 }
 
-.book-name, .author-name {
+.book-name,
+.author-name {
   font-size: 1.2rem;
   font-weight: 400;
   color: #445069;
@@ -244,8 +245,6 @@ body {
   border: 2px solid #5b9a8b;
   border-radius: 4px;
   align-self: flex-end;
-  border: 2px solid #5b9a8b;
-  border-radius: 4px;
   box-shadow: #252b48 0 0 3px;
   font-size: 1rem;
   font-weight: 600;

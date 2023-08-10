@@ -104,7 +104,6 @@ class Book {
     addNewSection.style.display = 'none';
     contactSection.style.display = 'flex';
   }
-
 }
 
 addBTN.addEventListener('click', (e) => {
@@ -115,7 +114,7 @@ addBTN.addEventListener('click', (e) => {
 });
 
 const currentDate = new Date();
-dateHolder.innerHTML = currentDate; 
+dateHolder.innerHTML = currentDate;
 list.addEventListener('click', Book.showList);
 addNewBtn.addEventListener('click', Book.showForm);
 contactInfo.addEventListener('click', Book.showContact);
