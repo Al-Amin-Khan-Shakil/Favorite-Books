@@ -140,6 +140,7 @@ body {
   border-radius: 3px;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 .parent-list {
@@ -190,6 +191,70 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: 70vh;
+}
+
+.add-book-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 96vw;
+  height: 70vh;
+}
+
+#book-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 60vw;
+  height: 50vh;
+  row-gap: 6vh;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #5b9a8b;
+  margin-bottom: 6vh;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 8px 12px;
+  color: #3d4778;
+  border: 2px solid #5b9a8b;
+  border-radius: 4px;
+  box-shadow: #252b48 0 0 3px;
+}
+
+#add-btn {
+  width: 30%;
+  padding: 8px 12px;
+  color: #3d4778;
+  border: 2px solid #5b9a8b;
+  border-radius: 4px;
+  align-self: flex-end;
+  border: 2px solid #5b9a8b;
+  border-radius: 4px;
+  box-shadow: #252b48 0 0 3px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#add-btn:hover {
+  border: 2px solid #487a6e;
+  border-radius: 4px;
+  box-shadow: #252b48 0 0 5px;
 }
 
 #contact-section {
